@@ -118,6 +118,11 @@ int main (int argc, char * argv[]) {
 		//		[result print];
 		
 		
+		//  Inversion
+		[cFraction setTo: -8 over: 9];
+		[cFraction print: 0];
+		cFraction = [cFraction invert];
+		[cFraction print: 1];
 	}
 	return 0; 
 }

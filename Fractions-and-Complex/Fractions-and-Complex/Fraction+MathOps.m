@@ -67,7 +67,8 @@ static int gAddCounter;
 }
 
 // Divide receiver by argument
--(Fraction *) divide: (Fraction *) f {
+-(Fraction *) divide: (Fraction *) f 
+{
 	// a/b / c/d = a/b * d/c = (a * d) / (b * c)
 	Fraction *result = [[Fraction alloc] init];
 	
@@ -76,5 +77,14 @@ static int gAddCounter;
 	
 	//[result reduce];
 	return result;	
+}
+
+-(Fraction *) invert
+{
+	Fraction *result = [[Fraction alloc] init];
+	result.numerator = self.denominator;
+	result.denominator = self.numerator;
+	
+	return result;
 }
 @end
