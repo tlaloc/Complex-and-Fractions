@@ -46,6 +46,7 @@
 
 #import "Fraction.h"
 #import "Complex.h"
+#import "Fraction+MathOps.h"
 
 int main (int argc, char * argv[]) {
 	

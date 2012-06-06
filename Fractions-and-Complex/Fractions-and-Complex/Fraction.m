@@ -8,7 +8,7 @@
 
 #import "Fraction.h"
 
-static int gCounter, gAddCount;
+static int gCounter;
 
 @implementation Fraction 
 
@@ -112,73 +112,6 @@ static int gCounter, gAddCount;
 		numerator *= -1;
 	numerator /= u;
 	denominator /= u; 	
-}
-
-// Add a fraction to the receiver
--(Fraction *) add: (Fraction *) f
-{
-	// To add two fractions:
-	// a/b + c/d = ((a*d) + (b*c)) / (b * d)
-	// result will store the result of the addition 
-	// gAddCount counts number of adds
-	
-	extern int gAddCount; 
-	
-	Fraction *result = [[Fraction alloc] init];
-	
-	result.numerator = numerator * f.denominator + denominator * f.numerator;
-	result.denominator = denominator * f.denominator;
-	
-	++gAddCount;
-	
-	//[result reduce];
-	return result;
-}
-
-// Returns the Add count
-+(int) addCount
-{
-	extern int gAddCount;
-	return gAddCount;
-}
-
-// Subtract argument from receiver
--(Fraction *) subtract: (Fraction *) f
-{
-	// To subtract a fraction:
-	// a/b - c/d = ((a*d) - (b*c)) / (b * d)
-	Fraction *result = [[Fraction alloc] init];
-	
-	result.numerator = numerator * f.denominator - denominator * f.numerator;
-	result.denominator = denominator * f.denominator;
-	
-	//[result reduce];
-	return result;
-}
-
-// Multiply receiver by argument
--(Fraction *) multiply: (Fraction *) f
-{
-	// a/b * c/d = (a * c) / (b * d)
-	Fraction *result = [[Fraction alloc] init];
-	
-	result.numerator = numerator * f.numerator;
-	result.denominator = denominator * f.denominator;
-	
-	//[result reduce];
-	return result;	
-}
-
-// Divide receiver by argument
--(Fraction *) divide: (Fraction *) f {
-	// a/b / c/d = a/b * d/c = (a * d) / (b * c)
-	Fraction *result = [[Fraction alloc] init];
-	
-	result.numerator = numerator * f.denominator;
-	result.denominator = denominator * f.numerator;
-	
-	//[result reduce];
-	return result;	
 }
 @end
 

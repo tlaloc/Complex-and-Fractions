@@ -25,11 +25,5 @@
 -(double)		convertToNum;
 // Reduce the fraction to its lowest common denominator
 -(void)			reduce;
-// Add fraction to receiver
--(Fraction *)	add: (Fraction *) f;
-+(int) addCount;
--(Fraction *)	subtract: (Fraction *) f;
--(Fraction *)	multiply: (Fraction *) f;
--(Fraction *)	divide: (Fraction *) f;
 
 @end

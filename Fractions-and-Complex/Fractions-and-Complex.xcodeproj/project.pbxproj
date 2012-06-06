@@ -12,6 +12,7 @@
 		128CBF92157EF83600AD5913 /* Complex.m in Sources */ = {isa = PBXBuildFile; fileRef = 128CBF8E157EF83600AD5913 /* Complex.m */; };
 		128CBF93157EF83600AD5913 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 128CBF90157EF83600AD5913 /* Fraction.m */; };
 		128CBF94157EF83600AD5913 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 128CBF91157EF83600AD5913 /* main.m */; };
+		12BEBB80157FD85E00BEBFE0 /* Fraction+MathOps.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BEBB7F157FD85E00BEBFE0 /* Fraction+MathOps.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		128CBF8F157EF83600AD5913 /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
 		128CBF90157EF83600AD5913 /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
 		128CBF91157EF83600AD5913 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		12BEBB7E157FD85E00BEBFE0 /* Fraction+MathOps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fraction+MathOps.h"; sourceTree = "<group>"; };
+		12BEBB7F157FD85E00BEBFE0 /* Fraction+MathOps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fraction+MathOps.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 				128CBF8F157EF83600AD5913 /* Fraction.h */,
 				128CBF90157EF83600AD5913 /* Fraction.m */,
 				128CBF91157EF83600AD5913 /* main.m */,
+				12BEBB7E157FD85E00BEBFE0 /* Fraction+MathOps.h */,
+				12BEBB7F157FD85E00BEBFE0 /* Fraction+MathOps.m */,
 				128CBF81157EF81E00AD5913 /* Fractions_and_Complex.1 */,
 				128CBF7F157EF81E00AD5913 /* Supporting Files */,
 			);
@@ -151,6 +156,7 @@
 				128CBF92157EF83600AD5913 /* Complex.m in Sources */,
 				128CBF93157EF83600AD5913 /* Fraction.m in Sources */,
 				128CBF94157EF83600AD5913 /* main.m in Sources */,
+				12BEBB80157FD85E00BEBFE0 /* Fraction+MathOps.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
