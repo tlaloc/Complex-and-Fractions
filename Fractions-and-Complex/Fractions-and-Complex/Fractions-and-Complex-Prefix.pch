@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Fractions-and-Complex' target in the 'Fractions-and-Complex' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif
