@@ -25,5 +25,4 @@
 -(double)		convertToNum;
 // Reduce the fraction to its lowest common denominator
 -(void)			reduce;
-
 @end

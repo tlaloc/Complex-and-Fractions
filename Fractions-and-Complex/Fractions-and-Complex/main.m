@@ -47,6 +47,9 @@
 #import "Fraction.h"
 #import "Complex.h"
 #import "Fraction+MathOps.h"
+#import "Fraction+Comparison.h"
+
+
 
 int main (int argc, char * argv[]) {
 	
@@ -117,12 +120,35 @@ int main (int argc, char * argv[]) {
 		//		result = [data1 add: data2];	// bad
 		//		[result print];
 		
-		
 		//  Inversion
-		[cFraction setTo: -8 over: 9];
-		[cFraction print: 0];
+		[cFraction setTo: -16 over: 18];
+		[cFraction print: 1];
 		cFraction = [cFraction invert];
 		[cFraction print: 1];
+	
+		// isEqualTo
+		NSLog(@"\n-------ISEqualTo-----------");
+		NSLog(@"c to c:  %i", [cFraction isEqualTo: cFraction]);
+		NSLog(@"c to a:  %i", [cFraction isEqualTo: aFraction]);
+		[cFraction setTo: 1 over: 0];
+		NSLog(@"c: %f", [cFraction convertToNum]);
+		NSLog(@"c as 1/0 to a:  %i", [cFraction isEqualTo: aFraction]);
+		NSLog(@"a to c as 1/0:  %i", [aFraction isEqualTo: cFraction]);
+		
+		// compare
+		NSLog(@"\n-------identify-----------");
+		NSLog(@"a is %g", [aFraction convertToNum]);
+		[aFraction print:NO];
+		NSLog(@"b is %g", [bFraction convertToNum]);
+		[bFraction print:NO];
+		NSLog(@"c is %g", [cFraction convertToNum]);
+		[cFraction print:NO];
+		NSLog(@"\n\\\\\\-------compare-----------");
+		NSLog(@"\na is %@ b",[aFraction compareStr: [aFraction compare:bFraction]]);
+		NSLog(@"\nb is %@ a",[aFraction compareStr: [bFraction compare:aFraction]]);
+		NSLog(@"\na is %@ c",[aFraction compareStr: [aFraction compare:cFraction]]);
+		NSLog(@"\nc is %@ a",[aFraction compareStr: [cFraction compare:aFraction]]);
+		NSLog(@"\na is %@ a",[aFraction compareStr: [aFraction compare:aFraction]]);
 	}
 	return 0; 
 }
