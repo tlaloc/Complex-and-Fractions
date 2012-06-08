@@ -9,6 +9,7 @@
 #import "Fraction+Comparison.h"
 
 @implementation Fraction (Comparison)
+/*
 -(BOOL) isEqualTo: (Fraction *) f
 {
 	double selfnum, fnum;
@@ -20,7 +21,7 @@
 		return YES;
 	else return NO;
 }
-
+*/
 -(int) compare: (Fraction *) f
 {
 	double selfnum, fnum;

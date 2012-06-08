@@ -139,8 +139,6 @@ int main (int argc, char * argv[]) {
 		[aFraction print:NO];
 		NSLog(@"b is %g", [bFraction convertToNum]);
 		[bFraction print:NO];
-		[cFraction setTo: 1 over: 0];
-		NSLog(@"c is set to 1/0: %f", [cFraction convertToNum]);
 		NSLog(@"c is %g", [cFraction print:YES]);
 		[cFraction print:NO];
 		NSLog(@"c is %s",isnan([cFraction convertToNum])
@@ -154,7 +152,7 @@ int main (int argc, char * argv[]) {
 		NSLog(@"c (1/0) to a:  %i", [cFraction isEqualTo: aFraction]);
 		NSLog(@"a to c (1/0):  %i", [aFraction isEqualTo: cFraction]);
 		NSLog(@"c to c:  %i", [cFraction isEqualTo: cFraction]);
-		NSLog(@"f1 to f2:  %i", [f1 isEqualTo: f2]);
+		NSLog(@"f1 to f2:  %i", [f1 isGreaterThanOrEqualTo: f2]);
 
 		NSLog(@"\n\\\\\\-------compare-----------");
 		NSLog(@"\na is %@ b",[aFraction compareSay: bFraction]);

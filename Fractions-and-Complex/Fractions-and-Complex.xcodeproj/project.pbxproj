@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1226CC151581FF73002E4500 /* NSObject+NSComparisonMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 1226CC141581FF73002E4500 /* NSObject+NSComparisonMethods.m */; };
 		128CBF7B157EF81E00AD5913 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128CBF7A157EF81E00AD5913 /* Foundation.framework */; };
 		128CBF82157EF81E00AD5913 /* Fractions_and_Complex.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 128CBF81157EF81E00AD5913 /* Fractions_and_Complex.1 */; };
 		128CBF92157EF83600AD5913 /* Complex.m in Sources */ = {isa = PBXBuildFile; fileRef = 128CBF8E157EF83600AD5913 /* Complex.m */; };
@@ -30,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1226CC131581FF73002E4500 /* NSObject+NSComparisonMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSComparisonMethods.h"; sourceTree = "<group>"; };
+		1226CC141581FF73002E4500 /* NSObject+NSComparisonMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSComparisonMethods.m"; sourceTree = "<group>"; };
 		128CBF76157EF81E00AD5913 /* Fractions-and-Complex */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Fractions-and-Complex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		128CBF7A157EF81E00AD5913 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		128CBF80157EF81E00AD5913 /* Fractions-and-Complex-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fractions-and-Complex-Prefix.pch"; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 		128CBF7C157EF81E00AD5913 /* Fractions-and-Complex */ = {
 			isa = PBXGroup;
 			children = (
+				1226CC131581FF73002E4500 /* NSObject+NSComparisonMethods.h */,
+				1226CC141581FF73002E4500 /* NSObject+NSComparisonMethods.m */,
 				128CBF8D157EF83600AD5913 /* Complex.h */,
 				128CBF8E157EF83600AD5913 /* Complex.m */,
 				128CBF8F157EF83600AD5913 /* Fraction.h */,
@@ -163,6 +168,7 @@
 				128CBF94157EF83600AD5913 /* main.m in Sources */,
 				12BEBB80157FD85E00BEBFE0 /* Fraction+MathOps.m in Sources */,
 				12BEBB84157FE09000BEBFE0 /* Fraction+Comparison.m in Sources */,
+				1226CC151581FF73002E4500 /* NSObject+NSComparisonMethods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

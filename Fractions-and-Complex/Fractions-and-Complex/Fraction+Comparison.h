@@ -9,7 +9,7 @@
 #import "Fraction.h"
 
 @interface Fraction (Comparison)
--(BOOL) isEqualTo: (Fraction *) f;
+//-(BOOL) isEqualTo: (Fraction *) f;
 -(int) compare: (Fraction *) f;
 -(NSString *) compareSay: (Fraction *) f;
 @end
