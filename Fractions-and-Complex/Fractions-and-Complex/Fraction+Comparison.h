@@ -11,5 +11,5 @@
 @interface Fraction (Comparison)
 -(BOOL) isEqualTo: (Fraction *) f;
 -(int) compare: (Fraction *) f;
--(NSString *) compareStr: (int) a;
+-(NSString *) compareSay: (Fraction *) f;
 @end

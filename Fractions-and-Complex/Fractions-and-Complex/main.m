@@ -126,29 +126,44 @@ int main (int argc, char * argv[]) {
 		cFraction = [cFraction invert];
 		[cFraction print: 1];
 	
-		// isEqualTo
-		NSLog(@"\n-------ISEqualTo-----------");
-		NSLog(@"c to c:  %i", [cFraction isEqualTo: cFraction]);
-		NSLog(@"c to a:  %i", [cFraction isEqualTo: aFraction]);
-		[cFraction setTo: 1 over: 0];
-		NSLog(@"c: %f", [cFraction convertToNum]);
-		NSLog(@"c as 1/0 to a:  %i", [cFraction isEqualTo: aFraction]);
-		NSLog(@"a to c as 1/0:  %i", [aFraction isEqualTo: cFraction]);
-		
-		// compare
+
 		NSLog(@"\n-------identify-----------");
+		[f1 setTo: 3 over: 4];
+		[f2 setTo: 6 over: 8];
+		
+		NSLog(@"a is %g", [f1 convertToNum]);
+		[f1 print:NO];
+		NSLog(@"a is %g", [f2 convertToNum]);
+		[f2 print:NO];
 		NSLog(@"a is %g", [aFraction convertToNum]);
 		[aFraction print:NO];
 		NSLog(@"b is %g", [bFraction convertToNum]);
 		[bFraction print:NO];
-		NSLog(@"c is %g", [cFraction convertToNum]);
+		[cFraction setTo: 1 over: 0];
+		NSLog(@"c is set to 1/0: %f", [cFraction convertToNum]);
+		NSLog(@"c is %g", [cFraction print:YES]);
 		[cFraction print:NO];
+		NSLog(@"c is %s",isnan([cFraction convertToNum])
+				 ?"Not a Number.":"a number.");
+		
+		NSLog(@"\n-------ISEqualTo-----------");
+		NSLog(@"c to c:  %i", [cFraction isEqualTo: cFraction]);
+		NSLog(@"c to a:  %i", [cFraction isEqualTo: aFraction]);
+		[cFraction setTo: 1 over: 0];
+		NSLog(@"c is set to 1/0: %f", [cFraction convertToNum]);
+		NSLog(@"c (1/0) to a:  %i", [cFraction isEqualTo: aFraction]);
+		NSLog(@"a to c (1/0):  %i", [aFraction isEqualTo: cFraction]);
+		NSLog(@"c to c:  %i", [cFraction isEqualTo: cFraction]);
+		NSLog(@"f1 to f2:  %i", [f1 isEqualTo: f2]);
+
 		NSLog(@"\n\\\\\\-------compare-----------");
-		NSLog(@"\na is %@ b",[aFraction compareStr: [aFraction compare:bFraction]]);
-		NSLog(@"\nb is %@ a",[aFraction compareStr: [bFraction compare:aFraction]]);
-		NSLog(@"\na is %@ c",[aFraction compareStr: [aFraction compare:cFraction]]);
-		NSLog(@"\nc is %@ a",[aFraction compareStr: [cFraction compare:aFraction]]);
-		NSLog(@"\na is %@ a",[aFraction compareStr: [aFraction compare:aFraction]]);
+		NSLog(@"\na is %@ b",[aFraction compareSay: bFraction]);
+		NSLog(@"\nb is %@ a",[bFraction compareSay: aFraction]);
+		NSLog(@"\na is %@ c",[aFraction compareSay: cFraction]);
+		NSLog(@"\nc is %@ a",[cFraction compareSay: aFraction]);
+		NSLog(@"\nc is %@ c",[cFraction compareSay: cFraction]);
+		NSLog(@"\na is %@ a",[aFraction compareSay: aFraction]);
+		NSLog(@"\nf1 is %@ f2",[f1 compareSay: f2]);
 	}
 	return 0; 
 }

@@ -26,21 +26,22 @@
 	double selfnum, fnum;
 	selfnum = [self convertToNum];
 	fnum = [f convertToNum];
-	if (selfnum == NAN) return NAN;
-	else if (fnum == NAN) return NAN;
+	if (isnan(selfnum) || isnan(fnum)) return NAN;
 	else if (selfnum < fnum) return -1;
 	else if (selfnum > fnum) return 1;
 	else								// selfnum == fnum
 		return 0;
 }
 
--(NSString *) compareStr: (int) a
+-(NSString *) compareSay: (Fraction *) f
 {	 
-	if (a == NAN) return @"NOT COMPARABLE to";
-	if (a == -1) return @"less than";
-	else if (a == 1) return @"greater than";
-	else if (a == 0) return @"equal to";
-	else return @"NOT COMPARABLE to";
+	double selfnum, fnum;
+	selfnum = [self convertToNum];
+	fnum = [f convertToNum];
+	if (isnan(selfnum) || isnan(fnum)) return @"NOT COMPARABLE to";
+	else if (selfnum < fnum) return @"less than";
+	else if (selfnum > fnum) return @"greater than";
+	else 
+		return @"equal to";
 }
-
 @end
