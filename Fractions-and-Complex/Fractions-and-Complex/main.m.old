@@ -1,0 +1,134 @@
+//
+//  main.m
+//  FractionTest
+//
+//  Created by Not Sure on 5/12/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import "Fraction.h"
+#import "Complex.h"
+#import "Fraction+MathOps.h"
+#import "Fraction+Comparison.h"
+
+
+int main (int argc, char * argv[]) {
+	
+	@autoreleasepool {
+
+		typedef Fraction *FractionObj;
+
+		//  Ch 13 E.4  --  
+		//  Write a function to add all the Fractions passed to it
+		//  in an array and to return the result as a Fraction.
+		
+		NSLog (@"Fractions allocated: %i", [Fraction count]);
+			   
+		FractionObj f1 = [[Fraction allocF] init],
+					f2 = [[Fraction allocF] init];
+		
+		Fraction *aFraction = [[Fraction allocF] init]; 
+		Fraction *bFraction = [[Fraction allocF] init];
+		
+		Fraction *cFraction;
+		
+		NSLog (@"Fractions allocated: %i", [Fraction count]);
+		// Set two fractions to 1/4 and 1/2 and add them together
+		
+		[aFraction setTo: -5 over: 2]; 
+		[bFraction setTo: 2 over: 7];
+		
+		// Print the results
+		
+		[aFraction print: NO]; 
+		NSLog (@"+"); 
+		[bFraction print: NO]; 
+		NSLog (@"=");
+		
+		cFraction = [aFraction add: bFraction];
+		[cFraction print: NO]; 
+		
+		NSLog (@"Fractions allocated: %i", [Fraction count]);
+		
+		cFraction = [aFraction subtract: bFraction];
+		[cFraction print: NO];
+		
+		cFraction = [aFraction multiply: bFraction];
+		[cFraction print: NO];
+		
+		cFraction = [aFraction divide: bFraction];
+		[cFraction print: NO];
+		
+		cFraction = [aFraction add: bFraction];
+		[cFraction print: NO];
+		
+		NSLog (@"\ngAddCount: %i", [Fraction addCount]);
+		
+		[aFraction print: YES]; 
+		NSLog (@"  reduced!"); 
+		[bFraction print: YES]; 
+		NSLog (@" reduced!");
+		
+		Complex *aComplex = [[Complex alloc] init];
+		
+		[aComplex setReal: 7.5 andImaginary: -2.5];
+		//		[[aComplex reduce];		// bad
+		[aComplex print];
+		
+		id data1;
+		data1 = aComplex; 
+		[data1 print];
+		id data2;
+		data2 = bFraction;
+		[data2 print: NO];
+		//		id result;
+		//		result = [data1 add: data2];	// bad
+		//		[result print];
+		
+		//  Inversion
+		[cFraction setTo: -16 over: 18];
+		[cFraction print: 1];
+		cFraction = [cFraction invert];
+		[cFraction print: 1];
+	
+
+		NSLog(@"\n-------identify-----------");
+		[f1 setTo: 3 over: 4];
+		[f2 setTo: 6 over: 8];
+		
+		NSLog(@"a is %g", [f1 convertToNum]);
+		[f1 print:NO];
+		NSLog(@"a is %g", [f2 convertToNum]);
+		[f2 print:NO];
+		NSLog(@"a is %g", [aFraction convertToNum]);
+		[aFraction print:NO];
+		NSLog(@"b is %g", [bFraction convertToNum]);
+		[bFraction print:NO];
+		NSLog(@"c is %g", [cFraction print:YES]);
+		[cFraction print:NO];
+		NSLog(@"c is %s",isnan([cFraction convertToNum])
+				 ?"Not a Number.":"a number.");
+		
+		NSLog(@"\n-------ISEqualTo-----------");
+		NSLog(@"c to c:  %i", [cFraction isEqualTo: cFraction]);
+		NSLog(@"c to a:  %i", [cFraction isEqualTo: aFraction]);
+		[cFraction setTo: 1 over: 0];
+		NSLog(@"c is set to 1/0: %f", [cFraction convertToNum]);
+		NSLog(@"c (1/0) to a:  %i", [cFraction isEqualTo: aFraction]);
+		NSLog(@"a to c (1/0):  %i", [aFraction isEqualTo: cFraction]);
+		NSLog(@"c to c:  %i", [cFraction isEqualTo: cFraction]);
+		NSLog(@"f1 to f2:  %i", [f1 isGreaterThanOrEqualTo: f2]);
+
+		NSLog(@"\n\\\\\\-------compare-----------");
+		NSLog(@"\na is %@ b",[aFraction compareSay: bFraction]);
+		NSLog(@"\nb is %@ a",[bFraction compareSay: aFraction]);
+		NSLog(@"\na is %@ c",[aFraction compareSay: cFraction]);
+		NSLog(@"\nc is %@ a",[cFraction compareSay: aFraction]);
+		NSLog(@"\nc is %@ c",[cFraction compareSay: cFraction]);
+		NSLog(@"\na is %@ a",[aFraction compareSay: aFraction]);
+		NSLog(@"\nf1 is %@ f2",[f1 compareSay: f2]);
+	
+	
+	}
+	return 0; 
+}
